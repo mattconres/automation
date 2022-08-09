@@ -1,3 +1,5 @@
+# Playbook that will update the host OS and clear cache
+
 - hosts: "A1_hosts"
   become: yes
   tasks:

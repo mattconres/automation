@@ -1,0 +1,12 @@
+# Playbook that will update the host OS, update FluxOS, and perform any needed cleanup
+
+- hosts: "A1_hosts"
+  become: yes
+  tasks:
+    - name: apt
+      apt: 
+        update_cache: yes
+        upgrade: 'yes'
+
+# sudo apt-get update -y && sudo apt-get --with-new-pkgs upgrade -y && sudo apt autoremove -y 
+# && cd zelflux && git checkout . && git checkout master && git reset --hard origin/master && git pull && sudo reboot
