@@ -1,3 +1,9 @@
 ---
-- name: TESTING
-  shell: whoami
+# tasks file for Common Role
+# NEED to update this comment
+
+- name: Get Relase version from Node
+  include: common-task-CheckOSVersion.yml
+  tags:
+      - Common_CheckOSVersion
+      - never
